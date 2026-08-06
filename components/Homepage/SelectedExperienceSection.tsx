@@ -75,14 +75,14 @@ function SelectedExperienceSection() {
               key={exp.index}
               className="grid grid-cols-1 gap-8 py-12 md:grid-cols-12 md:gap-10"
             >
-              <div className="md:col-span-3">
+              <div className="flex flex-col gap-2 md:col-span-3">
                 <span
                   className={`font-serif text-5xl font-semibold ${exp.accentText} opacity-20`}
                 >
                   {exp.index}
                 </span>
                 <p
-                  className={`mt-3 inline-block w-fit rounded-full px-3 py-1 text-xs font-semibold tracking-wide ${exp.accentBg} ${exp.accentText}`}
+                  className={`mt-3 inline-block w-fit rounded-full px-3 py-1 text-sm font-semibold tracking-wide ${exp.accentBg} ${exp.accentText}`}
                 >
                   {exp.tag}
                 </p>
