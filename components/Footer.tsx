@@ -64,7 +64,7 @@ export default function Footer() {
     <div>
       <div className="flex w-full justify-center">
         <Image
-          src="/images/ktm-nyc.png"
+          src="/images/ktm-nyc-1.png"
           alt="KTM-NYC"
           width={1920}
           height={1080}
