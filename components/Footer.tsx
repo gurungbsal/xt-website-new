@@ -2,8 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
-import Image from "next/image"
-import { Mail, ArrowUpRight, ArrowUp, LineChart, ChartArea } from "lucide-react"
+import { Mail, ArrowUpRight, ArrowUp } from "lucide-react"
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6"
 // ...existing code...
 
@@ -73,7 +72,7 @@ export default function Footer() {
               className="h-auto w-100"
             />
 
-            <p className="rounded-full border border-gray-200 px-4 py-1 text-sm leading-relaxed text-white">
+            <p className="rounded-full border border-gray-200 px-4 py-1 text-center text-xs leading-relaxed text-white md:text-sm">
               U.S.-led partnership. Globally distributed engineering.
             </p>
 
@@ -93,7 +92,7 @@ export default function Footer() {
             </div>
           </div>
           {/* Connect */}
-          <div className="w-2xl">
+          <div className="sm:w-full md:w-2xl">
             <div className="flex h-full flex-col items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5">
               <p className="text-sm font-semibold text-white">
                 Let&apos;s talk
