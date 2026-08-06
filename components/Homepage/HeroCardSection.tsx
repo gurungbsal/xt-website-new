@@ -5,7 +5,7 @@ function HeroCardSection() {
   return (
     <div className="border-y border-gray-200 py-8">
       <div className="container">
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           <div className="flex items-center gap-4">
             <Handshake />
             <p className="font-semibold">U.S.-Led Partnership</p>

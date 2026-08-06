@@ -160,9 +160,9 @@ function HowSection() {
               "radial-gradient(120% 140% at 15% 0%, #0A6BAE 0%, #014778 45%, #002E4E 100%)",
           }}
         >
-          <p className="w-2xl text-2xl text-white">
-            Every engagement begins with your organization's reality—and the
-            mission your technology must serve.
+          <p className="w-full text-2xl text-white md:w-2xl">
+            Every engagement begins with your organization&apos;s reality—and
+            the mission your technology must serve.
           </p>
           <Button className="bg-white px-6 py-6 text-primary hover:bg-white/90">
             Explore All Services

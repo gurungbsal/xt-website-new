@@ -61,7 +61,7 @@ function WhatStaysSection() {
           </ul>
 
           <div className="mt-12 flex w-full flex-col items-center justify-center">
-            <p className="mb-4 w-2xl text-center text-2xl text-white">
+            <p className="mb-4 w-full text-center text-2xl text-white md:w-2xl">
               You always know what we are building, why it matters, and what
               comes next.
             </p>

@@ -165,7 +165,7 @@ function HowWeWorkSection() {
 
                 {/* Content */}
                 <div className="grid grid-cols-12 items-center gap-8">
-                  <div className="col-span-8 flex-1 pt-1 pb-2 sm:pt-3">
+                  <div className="col-span-12 flex-1 pt-1 pb-2 sm:pt-3 lg:col-span-8">
                     <p
                       className={`w-fit rounded-full px-4 py-1 text-xs font-semibold uppercase ${step.pillClass}`}
                     >
@@ -174,7 +174,7 @@ function HowWeWorkSection() {
                     <h3 className="mt-2 text-2xl font-semibold text-primary sm:text-3xl">
                       {step.title}
                     </h3>
-                    <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-gray-600">
+                    <p className="mt-3 w-full text-[15px] leading-relaxed text-gray-600 lg:max-w-xl">
                       {step.description}
                     </p>
 
@@ -195,11 +195,11 @@ function HowWeWorkSection() {
                     </ul>
                   </div>
 
-                  <div className="col-span-4">
+                  <div className="col-span-12 lg:col-span-4">
                     <img
                       src={step.image}
                       alt={step.title}
-                      className="aspect-4/3 h-60 w-60 rounded-lg object-cover"
+                      className="aspect-4/3 h-full w-full rounded-lg object-cover md:h-60 md:w-60"
                     />
                   </div>
                 </div>

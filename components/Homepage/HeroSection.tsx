@@ -9,8 +9,8 @@ function HeroSection() {
     <div className="py-8">
       <div className="container">
         <div className="grid grid-cols-12 items-center">
-          <div className="col-span-6 flex flex-col gap-4">
-            <ul className="flex gap-4 text-xs">
+          <div className="col-span-12 flex flex-col gap-4 md:col-span-6">
+            <ul className="flex justify-center gap-4 text-xs md:justify-start">
               <li className="rounded-full border bg-green-100 px-4 py-1 font-semibold text-green-900">
                 STRATEGY
               </li>
@@ -21,13 +21,15 @@ function HeroSection() {
                 DELIVERY
               </li>
             </ul>
-            <h1 className="text-5xl font-bold text-primary">{title}</h1>
-            <p>
+            <h1 className="text-center text-3xl font-bold text-primary md:text-left md:text-5xl">
+              {title}
+            </h1>
+            <p className="text-center md:text-left">
               XylonTech helps mission-driven and operationally complex
               organizations modernize systems, build practical AI-enabled
               solutions, and extend their engineering capacity.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center justify-center gap-4 md:justify-start">
               <Button size="lg" className="px-4 py-6 hover:scale-105">
                 Book a Discover Call
               </Button>
@@ -41,7 +43,7 @@ function HeroSection() {
             </div>
           </div>
           {/* mission image */}
-          <div className="col-span-6 flex items-center justify-center">
+          <div className="col-span-12 mt-16 flex items-center justify-center md:col-span-6 lg:mt-0">
             <Image
               src="/images/homepage/Hero-mission-design.svg"
               alt="Mission"

@@ -44,7 +44,7 @@ function WhenSection() {
         description="Organizations often know where they need to go, but legacy systems, disconnected workflows, limited capacity, and unclear technology choices make progress harder than it should be"
       />
 
-      <div className="mt-16 grid grid-cols-4 gap-8">
+      <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {whenSectionCards.map((card, index) => {
           const Icon = card.icon
           return (
