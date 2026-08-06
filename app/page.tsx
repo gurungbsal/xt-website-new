@@ -1,19 +1,28 @@
+import ContactSection from "@/components/Homepage/ContactSection"
+import EnterpriseExperienceSection from "@/components/Homepage/EnterpriseExperienceSection"
+import HeroCardSection from "@/components/Homepage/HeroCardSection"
+import HeroSection from "@/components/Homepage/HeroSection"
+import HowSection from "@/components/Homepage/HowSection"
+import HowWeWorkSection from "@/components/Homepage/HowWeWorkSection"
+import SelectedExperienceSection from "@/components/Homepage/SelectedExperienceSection"
+import WhatStaysSection from "@/components/Homepage/WhatStaysSection"
+import WhenSection from "@/components/Homepage/WhenSection"
 import { Button } from "@/components/ui/button"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+    <div className="flex flex-col gap-16">
+      <div>
+        <HeroSection />
+        <HeroCardSection />
       </div>
+      <WhenSection />
+      <HowSection />
+      <HowWeWorkSection />
+      <WhatStaysSection />
+      <SelectedExperienceSection />
+      <EnterpriseExperienceSection />
+      <ContactSection />
     </div>
   )
 }

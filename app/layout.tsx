@@ -1,14 +1,21 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { Montserrat, Poppins } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-heading",
+})
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
 })
 
 export default function RootLayout({
@@ -20,10 +27,14 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      className={cn("antialiased", montserrat.variable, poppins.variable)}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
