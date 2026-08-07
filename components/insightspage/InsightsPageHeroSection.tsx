@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { ArrowRight, ArrowUpRight, CheckCircle } from "lucide-react"
 
-function ServiceHeroSection() {
+function InsightsPageHeroSection() {
   return (
     <div>
       <div className="relative overflow-hidden bg-white">
@@ -22,13 +22,13 @@ function ServiceHeroSection() {
             <div className="flex flex-col gap-6">
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary3/20 bg-primary3/5 px-4 py-1.5 text-xs font-semibold tracking-[0.15em] text-primary3">
                 <span className="h-1.5 w-1.5 rounded-full bg-primary3" />
-                WHAT WE DO
+                XYLONTECH INSIGHTS
               </span>
 
               <h1 className="text-4xl leading-[1.08] font-bold tracking-tight text-primary sm:text-5xl lg:text-[3.4rem]">
-                Technology that moves{" "}
+                Ideas for building technology that{" "}
                 <span className="relative inline-block text-primary3">
-                  meaningful missions
+                  serves what matters
                   <svg
                     className="absolute -bottom-1 left-0 w-full"
                     height="8"
@@ -44,44 +44,49 @@ function ServiceHeroSection() {
                       opacity="0.35"
                     />
                   </svg>
-                </span>{" "}
-                forward
+                </span>
               </h1>
 
               <p className="max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
-                XylonTech turns complex ideas, aging systems, and operational
-                challenges into secure, scalable, human-centered digital
-                solutions — from early discovery through long-term delivery.
+                Practical perspectives on digital modernization, responsible AI,
+                product development, organizational resilience, and the systems
+                connecting technology with people and purpose.
               </p>
 
+              <p className="max-w-lg text-base leading-relaxed text-muted-foreground">
+                We share what we&apos;re learning through our work, research,
+                partnerships, and continued exploration of how technology can
+                support more capable and resilient organizations.
+              </p>
+              {/* 
               <div className="flex flex-wrap gap-4 pt-2">
                 <Button className="h-12 px-6 text-base">
-                  Explore Our Services
+                  Browse Articles
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
                 <Button variant="outline" className="h-12 px-6 text-base">
-                  Start a Conversation
+                  Subscribe for Updates
                 </Button>
-              </div>
+              </div> */}
 
-              <dl className="mt-4 grid max-w-lg grid-cols-1 gap-3 border-t border-border pt-6 sm:grid-cols-3 sm:gap-4">
+              {/* <dl className="mt-4 grid max-w-lg grid-cols-1 gap-3 border-t border-border pt-6 sm:grid-cols-3 sm:gap-4">
                 {[
                   {
-                    label: "Strategy",
-                    from: "Ideas",
-                    to: "Direction",
+                    label: "Modernization",
+                    from: "Legacy",
+                    to: "Momentum",
                     color: "var(--primary2)",
                   },
                   {
-                    label: "Design",
-                    from: "Complexity",
-                    to: "Clarity",
+                    label: "Responsible AI",
+                    from: "Hype",
+                    to: "Judgment",
                     color: "var(--primary3)",
                   },
                   {
-                    label: "Engineering",
-                    from: "Projects",
-                    to: "Capability",
+                    label: "Resilience",
+                    from: "Uncertainty",
+                    to: "Readiness",
                     color: "var(--primary)",
                   },
                 ].map((item) => (
@@ -105,15 +110,16 @@ function ServiceHeroSection() {
                     </dd>
                   </div>
                 ))}
-              </dl>
+              </dl> */}
             </div>
 
+            {/* Right: image */}
             <div className="relative">
               <div className="relative">
                 <div className="overflow-hidden rounded-2xl">
                   <Image
-                    src="/images/servicepage/service-hero.avif"
-                    alt="XylonTech team collaborating on a client engagement"
+                    src="/images/insightspage/researching-discussing-ideas.jpg"
+                    alt="XylonTech team researching and discussing ideas"
                     height={1080}
                     width={1920}
                     priority
@@ -124,20 +130,20 @@ function ServiceHeroSection() {
 
               <div className="absolute right-6 -bottom-20 left-6 w-fit rounded-xl border border-border bg-white/90 p-5 shadow-xl backdrop-blur sm:right-auto sm:left-8">
                 <p className="text-sm font-semibold tracking-wide text-primary3">
-                  WHY IT WORKS
+                  LATEST THINKING
                 </p>
                 <ul className="mt-2 flex flex-col gap-1.5 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
                     <CheckCircle size={"16"} className="text-green-600" />
-                    From complexity to clarity
+                    Digital modernization playbooks
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle size={"16"} className="text-green-600" />
-                    From ideas to working systems
+                    Responsible, human-centered AI
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle size={"16"} className="text-green-600" />
-                    From projects to lasting capability
+                    Building resilient organizations
                   </li>
                 </ul>
               </div>
@@ -149,4 +155,4 @@ function ServiceHeroSection() {
   )
 }
 
-export default ServiceHeroSection
+export default InsightsPageHeroSection

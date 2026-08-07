@@ -45,7 +45,7 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white shadow-lg">
       <div className="container">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-1">
           <Link href="/" className="flex items-center">
             <img
               src="/images/Logo.svg"
