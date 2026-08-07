@@ -1,3 +1,6 @@
+"use client"
+
+import { useRef } from "react"
 import {
   Repeat2,
   ShieldCheck,
@@ -7,6 +10,7 @@ import {
   TrendingUp,
   type LucideIcon,
 } from "lucide-react"
+import { motion, useScroll, useTransform, useInView } from "motion/react"
 import SectionTitle from "../SectionTitle"
 
 const practices: {
@@ -52,54 +56,88 @@ const practices: {
   },
 ]
 
-function HowWeBuildSection() {
+function TimelineItem({ practice }: { practice: (typeof practices)[number] }) {
+  const ref = useRef(null)
+  const inView = useInView(ref, {
+    amount: 0.6,
+  })
+
+  const Icon = practice.icon
+
   return (
-    <div className="container py-20">
-      <SectionTitle
-        title="This is how we build"
-        description="Strong products grow from strong practices—and from people who care about how the work is done."
-      />
+    <div ref={ref} className="relative flex gap-6 pb-12">
+      {/* Icon */}
+      <motion.div
+        animate={{
+          scale: inView ? 1.15 : 1,
+        }}
+        transition={{
+          duration: 0.35,
+        }}
+        className={`relative z-10 flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-300 ${
+          inView
+            ? "border-primary3 bg-primary text-white shadow-lg shadow-primary/20"
+            : "border-border bg-background text-muted-foreground"
+        }`}
+      >
+        <Icon className="h-5 w-5" />
+      </motion.div>
 
-      <div className="flex w-full justify-center">
-        <div className="relative mt-16 flex w-2xl justify-center">
-          {/* timeline */}
-
-          <div className="space-y-10">
-            {practices.map((practice, i) => {
-              const Icon = practice.icon
-
-              return (
-                <div key={practice.title} className="group relative flex gap-6">
-                  {/* Timeline node */}
-                  <div className="relative z-10">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background transition-all duration-300 group-hover:border-primary3 group-hover:bg-primary3/10">
-                      <Icon className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-primary3" />
-                    </div>
-                  </div>
-
-                  <div className="flex-1 border-b border-border pb-10 transition-all duration-300 group-hover:border-primary3/30">
-                    <div className="mb-3 flex items-center gap-3">
-                      <span className="font-mono text-sm text-primary3">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-
-                      <h3 className="text-xl font-semibold">
-                        {practice.title}
-                      </h3>
-                    </div>
-
-                    <p className="max-w-lg leading-7 text-muted-foreground">
-                      {practice.description}
-                    </p>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
+      {/* Content */}
+      <div className="flex-1 border-b border-border pb-10">
+        <div className="mb-3 flex items-center gap-3">
+          <span className="text-lg font-bold text-primary">
+            {practice.title}
+          </span>
         </div>
+
+        <p className="w-xl leading-7 text-muted-foreground">
+          {practice.description}
+        </p>
       </div>
     </div>
   )
 }
 
-export default HowWeBuildSection
+export default function HowWeBuildSection() {
+  const ref = useRef<HTMLDivElement>(null)
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 60%", "end 80%"],
+  })
+
+  const lineScale = useTransform(scrollYProgress, [0, 1], [0, 1])
+
+  return (
+    <div className="container">
+      <SectionTitle
+        title="This is how we build"
+        description="Strong products grow from strong practices—and from people who care about how the work is done."
+      />
+      <section className="py-24">
+        <div className="flex justify-center">
+          <div ref={ref} className="relative">
+            {/* Gray line */}
+            <div className="absolute top-5 left-5 h-[calc(100%-60px)] w-px bg-border" />
+
+            {/* Animated line */}
+            <motion.div
+              style={{
+                scaleY: lineScale,
+                transformOrigin: "top",
+              }}
+              className="absolute top-5 left-5 h-[calc(100%-60px)] w-px bg-primary3"
+            />
+
+            <div>
+              {practices.map((practice) => (
+                <TimelineItem key={practice.title} practice={practice} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
