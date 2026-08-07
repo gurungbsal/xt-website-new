@@ -1,7 +1,7 @@
 import React from "react"
 
 interface SectionTitleProps {
-  mainTitle: string
+  mainTitle?: string
   title: string
   description?: string
 }

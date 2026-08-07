@@ -3,6 +3,7 @@
 import React, { useState } from "react"
 import { Search, Target, Code2, RefreshCw } from "lucide-react"
 import SectionTitle from "../SectionTitle"
+import Image from "next/image"
 
 const phases = [
   {
@@ -56,8 +57,7 @@ function OurDeliveryApproachSection() {
         title="Clear thinking. Collaborative delivery. Continuous learning."
       />
 
-      <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[320px_1fr] lg:gap-16">
-        {/* Left: stepper list */}
+      {/* <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[320px_1fr] lg:gap-16">
         <div className="flex flex-col">
           {phases.map((phase, i) => {
             const Icon = phase.icon
@@ -116,7 +116,6 @@ function OurDeliveryApproachSection() {
           </div>
         </div>
 
-        {/* Right: active phase detail */}
         <div className="relative overflow-hidden rounded-2xl border border-border bg-primary3/[0.03] p-10 sm:p-12">
           <div
             key={active}
@@ -126,9 +125,7 @@ function OurDeliveryApproachSection() {
               <ActiveIcon className="h-7 w-7 text-primary3" strokeWidth={1.5} />
             </div>
 
-            {/* <span className="mt-8 block font-mono text-sm font-semibold text-primary3">
-              {activePhase.number} / 04
-            </span> */}
+        
             <h3 className="mt-2 text-3xl font-bold text-primary">
               {activePhase.title}
             </h3>
@@ -137,7 +134,6 @@ function OurDeliveryApproachSection() {
             </p>
           </div>
 
-          {/* clickable step numbers */}
           <div className="mt-10 flex gap-2">
             {phases.map((phase, i) => {
               const isActive = i === active
@@ -159,17 +155,32 @@ function OurDeliveryApproachSection() {
             })}
           </div>
         </div>
+      </div> */}
+
+      <div className="flex justify-center">
+        <Image
+          src="/images/servicepage/delivery-approach.png"
+          alt=""
+          width={600}
+          height={200}
+        />
       </div>
 
       {/* Client collaboration */}
       <div className="mt-20 rounded-2xl border border-border bg-primary/[0.02] p-8 sm:p-10">
-        <h3 className="text-lg font-bold text-primary">
+        {/* <h3 className="text-lg font-bold text-primary">
           Client collaboration throughout
         </h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
           Clients remain connected to decisions, progress, risks, and priorities
           throughout the engagement.
-        </p>
+        </p> */}
+
+        <SectionTitle
+          title="Client collboration throught"
+          description="Clients remain connected to decisions, progress, risks, and priorities
+          throughout the engagement"
+        />
 
         <div className="mt-7 flex flex-wrap divide-x divide-border overflow-hidden rounded-lg border border-border bg-white">
           {collaboration.map((item) => (
