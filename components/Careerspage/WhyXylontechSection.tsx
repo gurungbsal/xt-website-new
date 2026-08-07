@@ -64,7 +64,7 @@ function WhyXylontechSection() {
         ))}
       </div>
 
-      <div className="mt-14 border-t border-border pt-10">
+      <div className="mt-14">
         <p className="max-w-2xl text-xl leading-relaxed font-medium text-primary sm:text-2xl">
           XylonTech is still becoming
           <span className="text-primary3">—</span>and the people who join us
