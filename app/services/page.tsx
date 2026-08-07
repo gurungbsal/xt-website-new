@@ -10,7 +10,7 @@ import WhyPartnerWithUsSection from "@/components/ServicePage/WhyPartnerWithUsSe
 
 function Page() {
   return (
-    <>
+    <div className="flex flex-col gap-16">
       <ServiceHeroSection />
       <OurServiceSection />
       <WhereWeHelpSection />
@@ -20,7 +20,7 @@ function Page() {
       <WhyPartnerWithUsSection />
       <WhoWeWorkWithUsSection />
       <StartConverstationSection />
-    </>
+    </div>
   )
 }
 
