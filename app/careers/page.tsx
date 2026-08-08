@@ -1,4 +1,5 @@
 import CareersHeroSection from "@/components/Careerspage/CareersHeroSection"
+import CultureWeAreBuildingSection from "@/components/Careerspage/CultureWeAreBuildingSection"
 import HeadquatersSection from "@/components/Careerspage/HeadquatersSection"
 import HowWeBuildSection from "@/components/Careerspage/HowWeBuildSection"
 import WhyXylontechSection from "@/components/Careerspage/WhyXylontechSection"
@@ -11,6 +12,7 @@ function page() {
       <WhyXylontechSection />
       <HowWeBuildSection />
       <HeadquatersSection />
+      <CultureWeAreBuildingSection />
     </div>
   )
 }

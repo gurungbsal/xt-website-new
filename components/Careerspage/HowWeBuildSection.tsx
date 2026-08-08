@@ -91,7 +91,7 @@ function TimelineItem({ practice }: { practice: (typeof practices)[number] }) {
           </span>
         </div>
 
-        <p className="w-xl leading-7 text-muted-foreground">
+        <p className="w-full max-w-xl leading-7 text-muted-foreground">
           {practice.description}
         </p>
       </div>
@@ -117,7 +117,7 @@ export default function HowWeBuildSection() {
       />
       <section className="py-24">
         <div className="flex justify-center">
-          <div ref={ref} className="relative">
+          <div ref={ref} className="relative w-full max-w-xl">
             {/* Gray line */}
             <div className="absolute top-5 left-5 h-[calc(100%-60px)] w-px bg-border" />
 

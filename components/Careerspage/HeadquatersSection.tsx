@@ -41,11 +41,11 @@ export default function HeadquatersSection() {
               className="group rounded-3xl border border-border bg-background p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary3/30 hover:shadow-xl"
             >
               <div className="flex items-center justify-between">
-                <div className="text-4xl">{office.emoji}</div>
+                {/* <div className="text-4xl">{office.emoji}</div> */}
 
-                <div className="rounded-full border border-border p-2 transition-colors group-hover:border-primary3 group-hover:text-primary3">
+                {/* <div className="rounded-full border border-border p-2 transition-colors group-hover:border-primary3 group-hover:text-primary3">
                   <ArrowUpRight className="h-4 w-4" />
-                </div>
+                </div> */}
               </div>
 
               <h3 className="mt-8 text-2xl font-semibold">{office.country}</h3>
@@ -62,7 +62,12 @@ export default function HeadquatersSection() {
           ))}
         </div>
 
-        <div className="mt-20 rounded-3xl bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30 px-10 py-12 shadow-2xl">
+        <p className="mt-8 text-center text-2xl font-bold text-primary3">
+          Different perspectives. Shared standards. One Commitment to meaningful
+          technology.
+        </p>
+
+        {/* <div className="mt-20 rounded-3xl bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30 px-10 py-12 shadow-2xl">
           <div className="flex flex-col gap-6 md:flex-row md:items-center">
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-primary">
               <Globe2 className="h-7 w-7" />
@@ -81,7 +86,7 @@ export default function HeadquatersSection() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
