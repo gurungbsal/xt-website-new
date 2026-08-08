@@ -55,7 +55,7 @@ const values = [
 function CultureWeAreBuildingSection() {
   return (
     <div className="my-16">
-      <div className="relative container overflow-hidden bg-linear-to-br from-primary via-primary to-[#1C2333] py-32 shadow-2xl sm:p-12">
+      <div className="relative overflow-hidden bg-linear-to-br from-primary via-primary to-[#1C2333] py-32 shadow-2xl sm:p-12">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
