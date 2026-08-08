@@ -64,11 +64,10 @@ function WhyXylontechSection() {
         ))}
       </div>
 
-      <div className="mt-14">
-        <p className="max-w-2xl text-xl leading-relaxed font-medium text-primary sm:text-2xl">
-          XylonTech is still becoming
-          <span className="text-primary3">—</span>and the people who join us
-          will help shape what it becomes.
+      <div className="mt-14 flex w-full justify-center">
+        <p className="max-w-2xl text-center text-xl leading-relaxed font-medium text-primary sm:text-2xl">
+          XylonTech is still becoming - and the people who join us will help
+          shape what it becomes.
         </p>
       </div>
     </div>

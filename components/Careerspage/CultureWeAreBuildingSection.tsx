@@ -55,7 +55,7 @@ const values = [
 function CultureWeAreBuildingSection() {
   return (
     <div className="my-16">
-      <div className="relative container overflow-hidden bg-linear-to-br from-primary via-primary to-[#1C2333] py-32 sm:p-12">
+      <div className="relative container overflow-hidden bg-linear-to-br from-primary via-primary to-[#1C2333] py-32 shadow-2xl sm:p-12">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
@@ -69,7 +69,7 @@ function CultureWeAreBuildingSection() {
         <div className="relative grid grid-cols-12 gap-10 lg:gap-12">
           {/* Image */}
           <div className="col-span-12 lg:col-span-4">
-            <div className="relative h-64 w-full overflow-hidden rounded-2xl border border-white/10 lg:h-full lg:min-h-130">
+            <div className="relative h-64 w-full overflow-hidden rounded-2xl shadow-2xl lg:h-full lg:min-h-130">
               <Image
                 src="/images/careerspage/culture-section.jpg"
                 alt="Our Culture"
