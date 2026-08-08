@@ -64,6 +64,7 @@ function FeaturedInsightCard({
           src={insight.image}
           alt={insight.title}
           fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-cover contrast-[0.97] grayscale-[55%] transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
@@ -112,7 +113,9 @@ function CompactInsightCard({
           src={insight.image}
           alt={insight.title}
           fill
+          sizes="112px"
           className="object-cover contrast-[0.97] grayscale-[55%] transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0"
+          loading="eager"
         />
       </div>
 

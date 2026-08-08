@@ -29,7 +29,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", montserrat.variable, poppins.variable)}
     >
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider>
           <Navbar />
           {children}

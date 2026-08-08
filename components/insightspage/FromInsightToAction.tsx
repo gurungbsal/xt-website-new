@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react"
 function FromInsightToAction() {
   return (
     <div className="container">
-      <div className="relative mt-16 overflow-hidden rounded-2xl">
+      <div className="relative mb-16 overflow-hidden rounded-2xl shadow-2xl">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
 
         <div className="relative z-10 flex h-full flex-col justify-center gap-5 px-8 py-12 sm:max-w-2xl sm:px-12">

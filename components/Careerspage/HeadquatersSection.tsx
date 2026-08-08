@@ -28,7 +28,7 @@ const offices = [
 export default function HeadquatersSection() {
   return (
     <section className="py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="container px-6">
         <SectionTitle
           title="One Team. Three Countries."
           description="Our distributed model brings together different forms of experience, knowledge, creativity, and perspective."
@@ -62,18 +62,18 @@ export default function HeadquatersSection() {
           ))}
         </div>
 
-        <div className="mt-20 rounded-3xl border border-border bg-muted/30 px-10 py-12">
+        <div className="mt-20 rounded-3xl bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30 px-10 py-12 shadow-2xl">
           <div className="flex flex-col gap-6 md:flex-row md:items-center">
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-primary">
               <Globe2 className="h-7 w-7" />
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold">
+              <h3 className="text-2xl font-semibold text-white">
                 Different perspectives. Shared standards.
               </h3>
 
-              <p className="mt-3 max-w-3xl leading-7 text-muted-foreground">
+              <p className="mt-3 max-w-3xl leading-7 text-white">
                 Whether strategy begins in the United States, engineering is
                 built in Nepal, or marketing is driven from the Philippines,
                 every project follows the same process, quality standards, and
