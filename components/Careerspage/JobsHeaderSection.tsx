@@ -306,7 +306,12 @@ function JobsHeaderSection() {
                   <span className="shrink-0 text-sm font-semibold text-primary">
                     {filter.label}
                   </span>
-                  <Select value={filter.value} onValueChange={filter.onChange}>
+                  <Select
+                    value={filter.value}
+                    onValueChange={(value) => {
+                      if (value !== null) filter.onChange(value)
+                    }}
+                  >
                     <SelectTrigger className="h-9 w-auto min-w-[140px] border-none bg-transparent px-2 text-sm text-muted-foreground shadow-none hover:text-primary focus:ring-0">
                       <SelectValue placeholder={filter.placeholder} />
                     </SelectTrigger>
